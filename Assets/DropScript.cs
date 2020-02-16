@@ -12,6 +12,7 @@ public class DropScript : MonoBehaviour
     public bool soundPlayed;
 
     public Rigidbody body;
+    private GlobalScore gameMode;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class DropScript : MonoBehaviour
         sound = GetComponent<AudioSource>();
         body = GetComponentInChildren<Rigidbody>();
         soundPlayed = false;
+        gameMode = transform.parent.parent.parent.parent.gameObject.GetComponent<GlobalScore>();
     }
 
     // Update is called once per frame
@@ -29,6 +31,7 @@ public class DropScript : MonoBehaviour
             fall = true;
             sound.PlayOneShot(SoundToPLay, 0.3f);
             soundPlayed = true;
+            gameMode.IncrementScore();
 
             SpringJoint joint = GetComponentInChildren<SpringJoint>();
             if (joint)
