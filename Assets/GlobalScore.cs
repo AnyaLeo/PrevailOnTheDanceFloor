@@ -8,7 +8,9 @@ public class GlobalScore : MonoBehaviour
     public int numberOfNpcs; 
     public bool mainPlayerFell;
     public bool win;
-    GameObject button;
+    GameObject retryButton;
+    GameObject winText;
+    GameObject lostText;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,9 @@ public class GlobalScore : MonoBehaviour
         globalScore = 0;
         mainPlayerFell = false;
 
-        button = GameObject.Find("RetryButton");
+        retryButton = GameObject.Find("RetryButton");
+        winText = GameObject.Find("WinText");
+        lostText = GameObject.Find("LostText");
     }
 
     // Update is called once per frame
@@ -36,12 +40,14 @@ public class GlobalScore : MonoBehaviour
     public void setMainMainPlayerFell()
     {
         mainPlayerFell = true;
-        button.SetActive(true);
+        retryButton.SetActive(true);
+        lostText.SetActive(true);
     }
 
     public void setWin()
     {
         win = true;
-        button.SetActive(true);
+        retryButton.SetActive(true);
+        winText.SetActive(true);
     }
 }
