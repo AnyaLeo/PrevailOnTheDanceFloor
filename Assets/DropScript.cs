@@ -26,7 +26,7 @@ public class DropScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (body.position.y < -2 && !soundPlayed)
+        if (body.position.y < 0f && !soundPlayed)
         {
             fall = true;
             sound.PlayOneShot(SoundToPLay, 0.3f);
