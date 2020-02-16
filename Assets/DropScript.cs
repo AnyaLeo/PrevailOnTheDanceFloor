@@ -18,15 +18,16 @@ public class DropScript : MonoBehaviour
     {
         sound = GetComponent<AudioSource>();
         body = GetComponentInChildren<Rigidbody>();
+        soundPlayed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (body.position.y < -1)
+        if (body.position.y < -2 && !soundPlayed)
         {
             fall = true;
-            sound.Play();
+            sound.PlayOneShot(SoundToPLay, 0.3f);
             soundPlayed = true;
         }
     }
