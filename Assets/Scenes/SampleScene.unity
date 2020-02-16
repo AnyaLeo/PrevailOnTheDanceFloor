@@ -5807,7 +5807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionChangeTime: 1
   characterVelocity: 2
-  player: {fileID: 1485153486}
+  player: {fileID: 720072826}
 --- !u!4 &1171501682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 980a593cc59d40247909022f65c11285,
@@ -5914,7 +5914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionChangeTime: 1
   characterVelocity: 2
-  player: {fileID: 1485153486}
+  player: {fileID: 720072826}
 --- !u!4 &1199489553 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 980a593cc59d40247909022f65c11285,
@@ -6402,7 +6402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionChangeTime: 1
   characterVelocity: 2
-  player: {fileID: 1485153486}
+  player: {fileID: 720072826}
 --- !u!4 &1365054729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 980a593cc59d40247909022f65c11285,
@@ -10072,7 +10072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionChangeTime: 1
   characterVelocity: 2
-  player: {fileID: 1485153486}
+  player: {fileID: 720072826}
 --- !u!4 &2139203914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 980a593cc59d40247909022f65c11285,
