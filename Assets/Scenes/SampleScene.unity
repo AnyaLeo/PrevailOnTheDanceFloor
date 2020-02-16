@@ -893,6 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce518512a9415047bd777053b5f8f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalScore: 0
 --- !u!1 &285396729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100158, guid: 980a593cc59d40247909022f65c11285,
@@ -1950,7 +1951,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.6328645, y: 1.631326, z: -4.478666}
+  m_LocalPosition: {x: -1.19, y: 1.631326, z: -4.478666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 283543368}
@@ -2418,6 +2419,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 572649307}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &572649320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572649319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43734688690cd2046900161cc8d57c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 1800
 --- !u!114 &572649321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2444,7 +2458,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000050477684, y: 0.46787477, z: 0.000000163913}
+  m_ConnectedAnchor: {x: -0.00000051409006, y: 0.46787527, z: 0}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2535,7 +2549,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.09799957, y: 0.07084305, z: 0.025871806}
+  m_ConnectedAnchor: {x: 0.09799957, y: 0.07084368, z: 0.02587232}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2610,7 +2624,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000050477684, y: 0.46787477, z: 0.000000163913}
+  m_ConnectedAnchor: {x: 0.00000051409006, y: 0.46787527, z: 0}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2701,7 +2715,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.09799957, y: 0.07084305, z: 0.025871806}
+  m_ConnectedAnchor: {x: -0.09799957, y: 0.07084368, z: 0.02587232}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2760,7 +2774,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000078231096, y: 0.3334652, z: 0.00000020861626}
+  m_ConnectedAnchor: {x: 0.0000008121133, y: 0.3334652, z: -0.00000008940697}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2851,7 +2865,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.1676712, y: 0.4786978, z: -0.031478513}
+  m_ConnectedAnchor: {x: 0.1676712, y: 0.47869784, z: -0.031478334}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2926,7 +2940,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000010728835, y: 0.33346426, z: -0.00000022351745}
+  m_ConnectedAnchor: {x: -0.0000006332993, y: 0.3334642, z: -0.000000081956394}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3017,7 +3031,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.1676712, y: 0.4786978, z: -0.031478513}
+  m_ConnectedAnchor: {x: -0.1676712, y: 0.47869784, z: -0.031478334}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3076,7 +3090,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.626892, z: -0.04956963}
+  m_ConnectedAnchor: {x: 0, y: 0.62689155, z: -0.049569465}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3150,7 +3164,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.17952777, z: 0.00000034272674}
+  m_ConnectedAnchor: {x: 0, y: 0.17952816, z: -0.00000005960465}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3194,7 +3208,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 1534268773}
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -11.651099, y: 1.4328351, z: 3.5090423}
+  m_ConnectedAnchor: {x: -11.651099, y: 2.040835, z: 3.671042}
   serializedVersion: 2
   m_Spring: 700
   m_Damper: 0.2
@@ -3986,25 +4000,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828130610}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
+  m_Script: {fileID: 11500000, guid: 43734688690cd2046900161cc8d57c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
---- !u!114 &828130614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 828130610}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
+  rotateSpeed: 1800
 --- !u!65 &828130615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4310,25 +4311,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927770726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
+  m_Script: {fileID: 11500000, guid: 43734688690cd2046900161cc8d57c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
---- !u!114 &927770730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927770726}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
+  rotateSpeed: 1900
 --- !u!65 &927770731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5960,25 +5948,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411608653}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
+  m_Script: {fileID: 11500000, guid: 43734688690cd2046900161cc8d57c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
---- !u!114 &1411608657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411608653}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
+  rotateSpeed: 1500
 --- !u!65 &1411608658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7192,12 +7167,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627757965}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
+  m_Script: {fileID: 11500000, guid: 43734688690cd2046900161cc8d57c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  rotateSpeed: 2200
 --- !u!54 &1627757967
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7227,19 +7202,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33534288, y: 0.17952843, z: 0.32253557}
   m_Center: {x: 0, y: 0.089764215, z: -0.04497215}
---- !u!114 &1627757969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627757965}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
 --- !u!114 &1627757971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7743,25 +7705,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701926588}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
+  m_Script: {fileID: 11500000, guid: 43734688690cd2046900161cc8d57c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
---- !u!114 &1701926592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701926588}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
+  rotateSpeed: 1800
 --- !u!65 &1701926593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9253,25 +9202,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080217355}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
+  m_Script: {fileID: 11500000, guid: 43734688690cd2046900161cc8d57c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
---- !u!114 &2080217359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080217355}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577181002187a904483ef1cada90f527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
+  rotateSpeed: 2000
 --- !u!65 &2080217360
 BoxCollider:
   m_ObjectHideFlags: 0
