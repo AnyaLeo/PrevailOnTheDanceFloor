@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     float maxYForce;
 
+    private GlobalScore gameMode;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
         // Get the maximum y force that we can apply to the body to keep it upright
         maxYForce = objectForce.force.y;
+        gameMode = transform.parent.parent.parent.parent.gameObject.GetComponent<GlobalScore>();
     }
 
     private void FixedUpdate()
@@ -46,5 +49,16 @@ public class PlayerController : MonoBehaviour
 
         // Move the player in that direction
         rb.AddForce(movement * speed);
+
+        if (rb.position.y < 0f)
+        {   
+
+            SpringJoint joint = GetComponent<SpringJoint>();
+            if (joint)
+            {
+                Destroy(joint);
+            }
+            gameMode.setMainMainPlayerFell();
+        }
     }
 }
