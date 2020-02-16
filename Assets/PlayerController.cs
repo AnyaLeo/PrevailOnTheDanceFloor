@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
     ConstantForce objectForce;
 
+    float maxYForce;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,6 +20,9 @@ public class PlayerController : MonoBehaviour
         SpringJoint joint = GetComponent<SpringJoint>();
         Rigidbody connectedComponent = joint.connectedBody;
         objectForce = connectedComponent.GetComponent<ConstantForce>();
+
+        // Get the maximum y force that we can apply to the body to keep it upright
+        maxYForce = objectForce.force.y;
     }
 
     private void FixedUpdate()
@@ -28,8 +33,8 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         // Calculate the appropriate y value for the upward force
-        float yForceValueToClamp = 170.0f - (Mathf.Abs(objectForce.force.x) + Mathf.Abs(objectForce.force.z));
-        float yForce = Mathf.Clamp(yForceValueToClamp, 0.0f, 170.0f);
+        float yForceValueToClamp = maxYForce - (Mathf.Abs(objectForce.force.x) + Mathf.Abs(objectForce.force.z));
+        float yForce = Mathf.Clamp(yForceValueToClamp, 0.0f, maxYForce);
 
         // Apply the object force corresponding to which direction the character is walking in
         Vector3 tilt = new Vector3(0.0f, yForce, 0.0f);
