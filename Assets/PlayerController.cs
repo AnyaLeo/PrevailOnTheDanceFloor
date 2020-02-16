@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
 
+    public bool playerFell = false; 
+
     private Rigidbody rb;
 
     ConstantForce objectForce;
@@ -35,16 +37,18 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        // Calculate the appropriate y value for the upward force
-        float yForceValueToClamp = maxYForce - (Mathf.Abs(objectForce.force.x) + Mathf.Abs(objectForce.force.z));
-        float yForce = Mathf.Clamp(yForceValueToClamp, 0.0f, maxYForce);
+        //// Calculate the appropriate y value for the upward force
+        //// NOTE: Disabled because it doesn't fit with the current game mode
+        //// of pushing people off instead of being knocked down
+        //float yForceValueToClamp = maxYForce - (Mathf.Abs(objectForce.force.x) + Mathf.Abs(objectForce.force.z));
+        //float yForce = Mathf.Clamp(yForceValueToClamp, 0.0f, maxYForce);
 
-        // Apply the object force corresponding to which direction the character is walking in
-        Vector3 tilt = new Vector3(0.0f, yForce, 0.0f);
-        Vector3 previousForce =
-            new Vector3(objectForce.force.x + moveHorizontal * 0.1f,
-                        0.0f,
-                        objectForce.force.z + moveVertical * 0.1f);
+        //// Apply the object force corresponding to which direction the character is walking in
+        //Vector3 tilt = new Vector3(0.0f, yForce, 0.0f);
+        //Vector3 previousForce =
+        //    new Vector3(objectForce.force.x + moveHorizontal * 0.1f,
+        //                0.0f,
+        //                objectForce.force.z + moveVertical * 0.1f);
         //objectForce.force = tilt + previousForce;
 
         // Move the player in that direction
@@ -58,7 +62,11 @@ public class PlayerController : MonoBehaviour
             {
                 Destroy(joint);
             }
-            gameMode.setMainMainPlayerFell();
+            if(!playerFell)
+            {
+                playerFell = true;
+                gameMode.setMainMainPlayerFell();
+            }
         }
     }
 }
