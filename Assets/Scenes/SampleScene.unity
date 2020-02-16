@@ -650,7 +650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 1, z: -3.22}
+  m_LocalPosition: {x: -0.5, y: 1, z: -5.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1722,55 +1722,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.335343, y: 0.47869882, z: 0.29512396}
   m_Center: {x: 0.000000059604645, y: 0.2393492, z: -0.012638718}
---- !u!145 &1151081553
-SpringJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151081548}
-  m_ConnectedBody: {fileID: 1792361851}
-  m_Anchor: {x: 0, y: 0.5, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.414189, y: -1.4060574, z: -0.79427683}
-  serializedVersion: 2
-  m_Spring: 300
-  m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 0
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!114 &1151081554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151081548}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43734688690cd2046900161cc8d57c96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateSpeed: 2000
---- !u!114 &1151081555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151081548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce686e2f1921f0c4a855d3d36e04bf9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
 --- !u!1 &1182503746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100082, guid: 980a593cc59d40247909022f65c11285,
