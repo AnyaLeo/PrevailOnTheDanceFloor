@@ -7,6 +7,6 @@ public class UIManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Instructions");
     }
 }
