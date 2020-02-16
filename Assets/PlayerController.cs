@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
             new Vector3(objectForce.force.x + moveHorizontal * 0.1f,
                         0.0f,
                         objectForce.force.z + moveVertical * 0.1f);
-        objectForce.force = tilt + previousForce;
+        //objectForce.force = tilt + previousForce;
 
         // Move the player in that direction
         rb.AddForce(movement * speed);

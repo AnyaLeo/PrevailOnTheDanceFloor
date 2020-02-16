@@ -29,6 +29,12 @@ public class DropScript : MonoBehaviour
             fall = true;
             sound.PlayOneShot(SoundToPLay, 0.3f);
             soundPlayed = true;
+
+            SpringJoint joint = GetComponentInChildren<SpringJoint>();
+            if (joint)
+            {
+                Destroy(joint);
+            }
         }
     }
 }
